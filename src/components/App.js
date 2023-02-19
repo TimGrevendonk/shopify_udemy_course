@@ -1,10 +1,9 @@
 // import logo from "./logo.svg";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import ProductPage from "../pages/ProductPage";
-import Navbar from "./Navbar";
+// import ProductPage from "../pages/ProductPage";
+import Navbar from "./NavBar";
 import Cart from "./Cart";
 import NavMenu from "./NavMenu";
 import Footer from "./Footer";
@@ -16,14 +15,12 @@ function App() {
         <Navbar />
         <NavMenu />
         <Cart />
-        <Switch>
-          <Route path="/products/:handle">
+        {/* <Route path="/products/:handle">
             <ProductPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
+          </Route> */}
+        <Route path="/">
+          <HomePage />
+        </Route>
         <Footer />
       </Router>
     </div>
